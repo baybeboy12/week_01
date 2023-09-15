@@ -26,6 +26,9 @@ dependencies {
     implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.2.0'
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'mysql:mysql-connector-java:8.0.32'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:2.0.0'
 }
 
 test {

@@ -8,4 +8,5 @@ public class Log {
     private Date login_time;
     private Date logout_time;
     private String notes;
+
 }
