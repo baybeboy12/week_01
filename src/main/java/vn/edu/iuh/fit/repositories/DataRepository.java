@@ -10,13 +10,14 @@ import java.util.List;
 public class DataRepository {
     private Connection connection=null;
 
-    public DataRepository(){
+    public org.mariadb.jdbc.Connection getConnection(){
         String url = "jdbc:mariadb://localhost:3306/mydb";
         try {
             connection = DriverManager.getConnection(url, "root", "sapassword");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        return (org.mariadb.jdbc.Connection) connection;
     }
     public List<Account> getAll(){
 
