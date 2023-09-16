@@ -8,10 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataRepository {
-    private Connection connection=null;
+    private static Connection connection=null;
 
-    public org.mariadb.jdbc.Connection getConnection(){
+    public static org.mariadb.jdbc.Connection getConnection(){
         String url = "jdbc:mariadb://localhost:3306/mydb";
+        try {
+            Class.forName("org.mariadb.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
         try {
             connection = DriverManager.getConnection(url, "root", "sapassword");
         } catch (SQLException e) {

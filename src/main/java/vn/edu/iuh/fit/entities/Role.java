@@ -4,12 +4,23 @@ public class Role {
     private String role_id;
     private String role_name;
     private String description;
-    private  Integer status;
+    private  Status status;
 
-    public Role(String role_id, String role_name, String description, Integer status) {
+    public Role(String role_id, String role_name, String description, Status status) {
         this.role_id = role_id;
         this.role_name = role_name;
         this.description = description;
+        this.status = status;
+    }
+
+    public Role(String role_id, String role_name) {
+        this.role_id = role_id;
+        this.role_name = role_name;
+    }
+
+    public Role(String role_id, String role_name, Status status) {
+        this.role_id = role_id;
+        this.role_name = role_name;
         this.status = status;
     }
 
@@ -40,11 +51,11 @@ public class Role {
         this.description = description;
     }
 
-    public Integer getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 

@@ -8,8 +8,7 @@ public class Account {
     private String phone;
     private Status status;
 
-    public Account() {
-    }
+
 
     public Account(String account_id, String full_name, String password, String email, String phone, Status status) {
         this.account_id = account_id;
