@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+import vn.edu.iuh.fit.entities.Account;
 import vn.edu.iuh.fit.services.AccountServices;
 
 import java.io.IOException;
@@ -32,8 +32,8 @@ public class ControllerServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        AccountServices service = new AccountServices();
+        List<Account> accountList = service.getAll();
+    }
 
 }
-}
-
